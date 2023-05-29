@@ -61,7 +61,7 @@ const Singlepost = () => {
                 updateMode ?  <input type="text" value={title} className="singlePostTitleInput" onChange={(e)=>setTitle(e.target.value)} autoFocus/> : (
                     <h1 className="singlepostTitle"> {post.title}
                 {
-                post.username === user? username  : (
+                post.username === user? user.username  : (
                     <div className="singlepostEdit">
                         <i className="singlepostIcon fa-solid fa-pen-to-square" onClick={()=> setUpdateMode(true)}></i>
                         <i className="singlepostIcon fa-solid fa-trash" onClick={handleDelete}></i>
