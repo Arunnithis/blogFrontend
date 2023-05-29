@@ -9,11 +9,14 @@ export default function Login() {
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
 
+  const deploy = "https://devstop.onrender.com";
+  const local = "http://localhost:5000";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post( deploy + "/api/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

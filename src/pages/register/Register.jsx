@@ -9,11 +9,14 @@ export default function Register() {
   const[password , setPassword] = useState("");
   const[error,setError] = useState(false);
 
+  const deploy = "https://devstop.onrender.com";
+  const local = "http://localhost:5000";
+
   const handleSubmit = async (e)=>{
     e.preventDefault();
     setError(false);
     try{
-      const res = await axios.post("http://localhost:5000/api/auth/register",{
+      const res = await axios.post(deploy + "/api/auth/register",{
       username,
       email,
       password

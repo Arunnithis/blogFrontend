@@ -9,12 +9,13 @@ import { useLocation } from "react-router-dom";
 const Home = () => {
   const [posts , setPosts] = useState([]);
   const {search} = useLocation();
-  const proxy = "https://localhost:5000"
-  // const proxy = "https://devstop.onrender.com/api"
+
+  const deploy = "https://devstop.onrender.com";
+  const local = "http://localhost:5000";
 
   useEffect(()=>{
     const fetchPosts = async ()=>{
-      const res = await axios.get(proxy + "/posts"+search)
+      const res = await axios.get( deploy + "/api/posts"+search)
       setPosts(res.data)
     }
     fetchPosts()

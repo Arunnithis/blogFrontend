@@ -13,6 +13,8 @@ const Setting = () => {
   const [success, setSuccess] = useState(false);
   const PF = "http://localhost:5000/images/"
 
+  const deploy = "https://devstop.onrender.com";
+  const local = "http://localhost:5000";
 
   const handleSubmit = async (e)=> {
     e.preventDefault();
@@ -30,7 +32,7 @@ const Setting = () => {
       data.append("file",file);
       UpdatedUser.profilepicture = filename;
       try{
-        const res = await axios.post("https://localhost:5000/api/upload",data);
+        const res = await axios.post(deploy + "/api/upload",data);
         dispatch({type : "UPDATE_SUCCESS",payload : res.data})
       }catch(err){
         dispatch({type : "UPDATE_FAILURE"})
@@ -39,7 +41,7 @@ const Setting = () => {
     }
     console.log(user)
     try{
-      await axios.put("https://localhost:5000/api/users/"+user._id,UpdatedUser);
+      await axios.put( deploy + "/api/users/"+user._id,UpdatedUser);
       setSuccess(true); 
     }catch(err){
       console.log(err);

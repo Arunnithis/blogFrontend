@@ -8,7 +8,9 @@ const Write = () => {
     const[desc , setDesc] = useState("");
     const[file , setFile] = useState(null);
     const {user} = useContext(Context);
-  
+    
+    const deploy = "https://devstop.onrender.com";
+    const local = "http://localhost:5000";
 
   const handleSubmit = async (e)=> {
     e.preventDefault();
@@ -24,7 +26,7 @@ const Write = () => {
       data.append("file",file);
       newPost.photo = filename;
       try{
-        await axios.post("http:localhost:5000/api/upload",data);
+        await axios.post( deploy +  "/api/upload",data);
       }catch(err){
         console.log(err)
       }

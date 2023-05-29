@@ -12,11 +12,15 @@ const Singlepost = () => {
     const [desc ,setDesc] = useState("")
     const [updateMode ,setUpdateMode] = useState(false)
     const {user} = useContext(Context);
-    const PF = "http://localhost:5000/images/";
+    
+    const deploy = "https://devstop.onrender.com";
+    const local = "http://localhost:5000";
+    
+    const PF = deploy + "/images/";
 
     const handleUpdate = async ()=>{
         try{
-            await axios.put(`http://localhost:5000/api/posts/${post._id}` ,
+            await axios.put(deploy + `/api/posts/${post._id}` ,
             {
                 username : user.username,
                 title,

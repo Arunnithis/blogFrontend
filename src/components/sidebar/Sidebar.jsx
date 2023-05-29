@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
     const [cats , setCats] = useState([]);
 
+    const deploy = "https://devstop.onrender.com";
+    const local = "http://localhost:5000";
+
     useEffect(()=>{
         const getCat = async () =>{
-            const res = await axios.get("http://localhost:5000/api/categories")
+            const res = await axios.get(deploy + "/api/categories")
             setCats(res.data)
         }
         getCat()
