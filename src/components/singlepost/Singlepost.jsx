@@ -34,7 +34,7 @@ const Singlepost = () => {
 
     const handleDelete =async () =>{
         try{
-            await axios.delete(`http://localhost:5000/api/posts/${post._id}` ,{data:{username:user.username}});
+            await axios.delete(deploy + `/api/posts/${post._id}` ,{data:{username:user.username}});
             window.location.replace("/");
         }catch(err){
             console.log(err)
@@ -44,7 +44,7 @@ const Singlepost = () => {
 
     useEffect(()=>{
         const getPost = async () =>{
-            const res = await axios.get("http://localhost:5000/api/posts/"+ path);
+            const res = await axios.get( deploy + "/api/posts/"+ path);
             setPost(res.data)
             setDesc(res.data.desc)
             setTitle(res.data.title)

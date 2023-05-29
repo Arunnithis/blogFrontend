@@ -8,7 +8,7 @@ const Write = () => {
     const[desc , setDesc] = useState("");
     const[file , setFile] = useState(null);
     const {user} = useContext(Context);
-    
+
     const deploy = "https://devstop.onrender.com";
     const local = "http://localhost:5000";
 
@@ -32,7 +32,7 @@ const Write = () => {
       }
     }
     try{
-      const res = await axios.post("http:localhost:5000/api/posts",newPost);
+      const res = await axios.post(deploy + "/api/posts",newPost);
       window.location.replace("/post/" + res.data._id);
     }catch(err){
       console.log(err);

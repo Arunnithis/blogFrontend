@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom';
 import './post.css';
 
 const Post = ({post}) => {
-  const PF = "http://localhost:5000/images/";
+
+  const deploy = "https://devstop.onrender.com";
+  const local = "http://localhost:5000"
+  const PF = deploy + "/images/";
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
