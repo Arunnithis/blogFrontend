@@ -24,6 +24,10 @@
     display: flex;
     flex-direction: column;
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+}
 .settingPP{
     display: flex;
     align-items: center;
