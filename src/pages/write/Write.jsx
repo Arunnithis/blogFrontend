@@ -24,13 +24,13 @@ const Write = () => {
       data.append("file",file);
       newPost.photo = filename;
       try{
-        await axios.post("https://devstop.onrender.com/upload",data);
+        await axios.post("https://devstop.onrender.com/api/upload",data);
       }catch(err){
         console.log(err)
       }
     }
     try{
-      const res = await axios.post("https://devstop.onrender.com/posts",newPost);
+      const res = await axios.post("https://devstop.onrender.com/api/posts",newPost);
       window.location.replace("/post/" + res.data._id);
     }catch(err){
       console.log(err);
