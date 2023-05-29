@@ -9,6 +9,10 @@
     object-fit: cover;
 
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+}
 .writeForm{
     position: relative;
 }

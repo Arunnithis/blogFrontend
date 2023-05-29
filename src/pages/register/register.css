@@ -15,7 +15,10 @@
 .registerTitle {
   font-size: 50px;
 }
-
+.link{
+  text-decoration: none;
+  color: inherit;
+}
 .registerForm {
   margin-top: 20px;
   display: flex;

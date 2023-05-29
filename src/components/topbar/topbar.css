@@ -9,6 +9,10 @@
     font-family: 'Josefin Sans', sans-serif;
     background-color: white;
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+}
 .topLeft , .topRight{
     flex: 3;
     display: flex;

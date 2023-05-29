@@ -4,3 +4,7 @@
     flex-wrap: wrap;
     margin: 20px;
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+}

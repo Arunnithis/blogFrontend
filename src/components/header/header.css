@@ -8,6 +8,10 @@
     color: black;
     font-family: 'Lora', serif;
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+}
 .headerTitleSm{
     position: absolute;
     font-style: 20px;

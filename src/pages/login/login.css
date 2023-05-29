@@ -32,6 +32,10 @@
   border: none;
   border-radius: 10px;
 }
+.link{
+  text-decoration: none;
+  color: inherit;
+}
 
 .loginInput:focus {
   outline: none;

@@ -13,6 +13,10 @@
     border-radius: 5px;
     object-fit: cover;
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+}
 .singlepostTitle{
     text-align: center;
     margin: 10px;
