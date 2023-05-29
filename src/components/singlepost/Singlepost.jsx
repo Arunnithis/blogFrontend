@@ -18,7 +18,7 @@ const Singlepost = () => {
     
     const PF = deploy + "/images/";
 
-    console.log(post.username,user,user.username);
+    console.log(post.username,user.username);
 
     const handleUpdate = async ()=>{
         try{
