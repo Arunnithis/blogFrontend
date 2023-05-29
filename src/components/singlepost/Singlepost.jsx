@@ -16,7 +16,7 @@ const Singlepost = () => {
 
     const handleUpdate = async ()=>{
         try{
-            await axios.put(`http://localhost:5000/api/posts/${post._id}` ,
+            await axios.put(`https://devstop.onrender.com/posts/${post._id}` ,
             {
                 username : user.username,
                 title,
@@ -30,7 +30,7 @@ const Singlepost = () => {
 
     const handleDelete =async () =>{
         try{
-            await axios.delete(`http://localhost:5000/api/posts/${post._id}` ,{data:{username:user.username}});
+            await axios.delete(`https://devstop.onrender.com/posts/${post._id}` ,{data:{username:user.username}});
             window.location.replace("/");
         }catch(err){
             console.log(err)
@@ -40,7 +40,7 @@ const Singlepost = () => {
 
     useEffect(()=>{
         const getPost = async () =>{
-            const res = await axios.get("http://localhost:5000/api/posts/"+ path);
+            const res = await axios.get("https://devstop.onrender.com/posts/"+ path);
             setPost(res.data)
             setDesc(res.data.desc)
             setTitle(res.data.title)

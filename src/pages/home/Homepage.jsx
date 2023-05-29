@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 const Home = () => {
   const [posts , setPosts] = useState([]);
   const {search} = useLocation();
-  const proxy = "http://localhost:5000/api"
+  const proxy = "https://devstop.onrender.com"
 
   useEffect(()=>{
     const fetchPosts = async ()=>{
