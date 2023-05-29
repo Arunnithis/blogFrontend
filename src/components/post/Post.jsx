@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useId } from 'react';
 import './post.css';
 
 const Post = ({post}) => {

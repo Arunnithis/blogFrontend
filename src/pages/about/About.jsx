@@ -28,8 +28,8 @@ const About = () => {
                   </div>
                 </h5>
                 <div className="aboutSocial">
-                  <a href=""><i className="aboutIcon fa-brands fa-facebook"></i></a>
-                  <a href=""><i className="aboutIcon fa-brands fa-instagram"></i></a>  
+                  <a href="/"><i className="aboutIcon fa-brands fa-facebook"></i></a>
+                  <a href="/"><i className="aboutIcon fa-brands fa-instagram"></i></a>  
                 </div>
             </div>
         </div>

@@ -13,8 +13,8 @@ const Topbar = () => {
   return (
     <div className='top'>
       <div className="topLeft">
-        <a href=""><i className="topIcon fa-brands fa-facebook"></i></a>
-        <a href=""><i className="topIcon fa-brands fa-instagram"></i></a>  
+        <a href="/"><i className="topIcon fa-brands fa-facebook"></i></a>
+        <a href="/"><i className="topIcon fa-brands fa-instagram"></i></a>  
       </div>
       <div className="topCenter">
         <ul className='topList'>
